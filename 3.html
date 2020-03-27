@@ -1,18 +1,49 @@
-<!장동진 설명>
+<!Vili 설명>
 <html>
 <head>
-  <title>WEB1 - 직업소개</title>
+  <title>Vili - 호텔</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1><a href="index.html">장동진</a></h1>
-  <ol>
-    <li><a href="1.html">자기소개</a></li>
-    <li><a href="2.html">가족소개</a></li>
-    <li><a href="3.html">직업소개</a></li>
-  </ol>
-  <h2>장동진의 직업은 무엇입니까??</h2>
-  <p>저의 직업은 현재 요리사, <strong>마케팅 회사의 대표</strong>입니다.</p>
-  <p>현재 케이펍이라는 피자숍에서 요리를 하고 있으며, 하이퐁에서 홍보물을 제작해주는 마케팅 회사 대표입니다.</p>
+  <div id="bt">
+    <input id="night_day" type="button" value="주간모드" onclick="
+    var target = document.querySelector('body');
+    if(this.value ==='주간모드'){
+      target.style.backgroundColor='black';
+      target.style.color='white';
+      this.value ='야간모드';
+      var alist= document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+      alist[i].style.color = 'white';
+      i = i+1;}
+    }else{
+      target.style.backgroundColor='white';
+      target.style.color='black';
+      this.value ='주간모드';
+      var alist= document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+      alist[i].style.color = 'black';
+      i = i+1;}
+    }
+    ">
+  </div>
+  <h1><a href="index.html">Vili</a></h1>
+  <div id="grid">
+    <ul>
+      <li><a href="1.html">아파트</a></li>
+      <li><a href="2.html">빌라</a></li>
+      <li><a href="3.html">호텔</a></li>
+    </ul>
+    <div id="article">
+      <h2>Vili - 호텔 목록</h2>
+      <h3>Vili가 추천하는 평점 최고 호텔<h3>
+        <img src="hotel1.jpg" height="250">
+        <img src="hotel2.jpg" height="250">
+        <img src="hotel3.jpg" height="250">
+    </div>
+   </div>
 </body>
 </html>
