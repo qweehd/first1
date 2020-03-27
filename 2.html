@@ -4,30 +4,12 @@
   <title>Vili - 빌라</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="colors.js"></script>
 </head>
 <body>
   <div id="bt">
     <input id="night_day" type="button" value="주간모드" onclick="
-    var target = document.querySelector('body');
-    if(this.value ==='주간모드'){
-      target.style.backgroundColor='black';
-      target.style.color='white';
-      this.value ='야간모드';
-      var alist= document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-      alist[i].style.color = 'white';
-      i = i+1;}
-    }else{
-      target.style.backgroundColor='white';
-      target.style.color='black';
-      this.value ='주간모드';
-      var alist= document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-      alist[i].style.color = 'black';
-      i = i+1;}
-    }
+      nightDayHandler(this);
     ">
   </div>
   <h1><a href="index.html">Vili</a></h1>
